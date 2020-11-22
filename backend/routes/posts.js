@@ -77,7 +77,7 @@ router.put(
 router.get('', (req, res, next) => {
     const pageSize = +req.query.pagesize;
     const currentPage = +req.query.page;
-    const postQuery = Post.find;
+    const postQuery = Post.find();
     let fetchedPosts;
     if(pageSize && currentPage) {
         postQuery
